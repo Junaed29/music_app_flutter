@@ -13,10 +13,22 @@ class MyApp extends StatelessWidget {
     player.play("note$itemNumber.wav");
   }
 
+  Widget playButton(Color buttonColor, int itemNumber) {
+    return Expanded(
+      child: MaterialButton(
+        onPressed: () {
+          playMusic(itemNumber);
+        },
+        color: buttonColor,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // or as a local variable
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black,
         body: SafeArea(
@@ -24,62 +36,13 @@ class MyApp extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(1);
-                    },
-                    color: Colors.red,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(2);
-                    },
-                    color: Colors.orange,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(3);
-                    },
-                    color: Colors.yellow,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(4);
-                    },
-                    color: Colors.green,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(5);
-                    },
-                    color: Colors.teal,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(6);
-                    },
-                    color: Colors.blue,
-                  ),
-                ),
-                Expanded(
-                  child: MaterialButton(
-                    onPressed: () {
-                      playMusic(7);
-                    },
-                    color: Colors.purple,
-                  ),
-                ),
+                playButton(Colors.red, 1),
+                playButton(Colors.orange, 2),
+                playButton(Colors.yellow, 3),
+                playButton(Colors.green, 4),
+                playButton(Colors.teal, 5),
+                playButton(Colors.blue, 6),
+                playButton(Colors.purple, 7),
               ],
             ),
           ),
