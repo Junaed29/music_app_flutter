@@ -13,16 +13,14 @@ class MyApp extends StatelessWidget {
     player.play("note$itemNumber.wav");
   }
 
-  Widget playButton(Color buttonColor, int itemNumber) {
-    return Expanded(
-      child: MaterialButton(
-        onPressed: () {
-          playMusic(itemNumber);
-        },
-        color: buttonColor,
-      ),
-    );
-  }
+  Widget playButton(Color buttonColor, int itemNumber) => Expanded(
+        child: MaterialButton(
+          onPressed: () {
+            playMusic(itemNumber);
+          },
+          color: buttonColor,
+        ),
+      );
 
   @override
   Widget build(BuildContext context) {
