@@ -8,105 +8,76 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  void playMusic(int itemNumber) {
+    final player = AudioCache();
+    player.play("note$itemNumber.wav");
+  }
+
   @override
   Widget build(BuildContext context) {
     // or as a local variable
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.black,
         body: SafeArea(
           child: Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note1.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.blue,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(1);
+                    },
+                    color: Colors.red,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note2.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.red,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(2);
+                    },
+                    color: Colors.orange,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note3.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.green,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(3);
+                    },
+                    color: Colors.yellow,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note4.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.yellow,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(4);
+                    },
+                    color: Colors.green,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note5.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.grey,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(5);
+                    },
+                    color: Colors.teal,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note6.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.lightBlueAccent,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(6);
+                    },
+                    color: Colors.blue,
                   ),
                 ),
-                TextButton(
-                  onPressed: () {
-                    final player = AudioCache();
-                    debugPrint("Play clicked");
-                    player.play("note7.wav");
-                  },
-                  child: SizedBox(
-                    height: 50,
-                    child: Container(
-                      color: Colors.redAccent,
-                    ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed: () {
+                      playMusic(7);
+                    },
+                    color: Colors.purple,
                   ),
                 ),
               ],
