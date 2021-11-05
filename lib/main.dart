@@ -15,18 +15,101 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Center(
-            child: TextButton(
-              child: const Text(
-                "Play",
-                style: TextStyle(
-                  fontSize: 20,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note1.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.blue,
+                    ),
+                  ),
                 ),
-              ),
-              onPressed: () {
-                final player = AudioCache();
-                debugPrint("Play clicked");
-                player.play("note1.wav");
-              },
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note2.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.red,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note3.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.green,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note4.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.yellow,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note5.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note6.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.lightBlueAccent,
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    final player = AudioCache();
+                    debugPrint("Play clicked");
+                    player.play("note7.wav");
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Container(
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),
